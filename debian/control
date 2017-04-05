@@ -1,0 +1,14 @@
+Source: pwizard
+Maintainer: Sten Heinze <shze@gmx.de>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 9)
+
+Package: pwizard
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Tools and libraries for proteomics data analysis
+ The ProteoWizard Library and Tools are a set of modular and extensible 
+ open-source, cross-platform tools and software libraries that facilitate 
+ proteomics data analysis.

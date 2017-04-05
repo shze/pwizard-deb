@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+
+override_dh_auto_build:
+	sh quickbuild.sh
+
+override_dh_auto_test:
+
+override_dh_auto_install:
+	mkdir debian/tmp
+	#tar -xf build-linux-x86_64/myrimatch-bin-linux-x86_64-gcc49-release-2_1_138.tar.bz2 -C debian/tmp
+
+override_dh_auto_clean:
+	#rm -rf debian/tmp
+	#bash clean.sh
+
