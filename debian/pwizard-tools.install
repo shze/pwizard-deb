@@ -1,0 +1,17 @@
+debian/tmp/pwiz/chainsaw usr/bin
+debian/tmp/pwiz/idcat usr/bin
+debian/tmp/pwiz/idconvert usr/bin
+debian/tmp/pwiz/msaccess usr/bin
+debian/tmp/pwiz/msbenchmark usr/bin
+debian/tmp/pwiz/mscat usr/bin
+debian/tmp/pwiz/msconvert usr/bin
+debian/tmp/pwiz/msdiff usr/bin
+debian/tmp/pwiz/msdir usr/bin
+debian/tmp/pwiz/msistats usr/bin
+debian/tmp/pwiz/mspicture usr/bin
+debian/tmp/pwiz/peakaboo usr/bin
+debian/tmp/pwiz/pepcat usr/bin
+debian/tmp/pwiz/pepsum usr/bin
+debian/tmp/pwiz/qtofpeakpicker usr/bin
+debian/tmp/pwiz/sldout usr/bin
+debian/tmp/pwiz/txt2mzml usr/bin

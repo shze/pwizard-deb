@@ -1,0 +1,8 @@
+debian/tmp/bumbershoot/adjustScanRankerScoreByGroup usr/bin
+debian/tmp/bumbershoot/directag usr/bin
+debian/tmp/bumbershoot/greazy usr/bin
+debian/tmp/bumbershoot/lipidlama usr/bin
+debian/tmp/bumbershoot/myrimatch usr/bin
+debian/tmp/bumbershoot/pepitome usr/bin
+debian/tmp/bumbershoot/quameter usr/bin
+debian/tmp/bumbershoot/tagrecon usr/bin

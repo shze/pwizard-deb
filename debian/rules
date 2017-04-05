@@ -11,10 +11,13 @@ override_dh_auto_build:
 override_dh_auto_test:
 
 override_dh_auto_install:
-	mkdir debian/tmp
-	#tar -xf build-linux-x86_64/myrimatch-bin-linux-x86_64-gcc49-release-2_1_138.tar.bz2 -C debian/tmp
+	mkdir -p debian/tmp/bibliospec
+	tar -xf build-linux-x86_64/BiblioSpec/bibliospec-bin-linux-gcc49-release-3_0_10577.tar.bz2 -C debian/tmp/bibliospec
+	mkdir -p debian/tmp/bumbershoot
+	tar -xf build-linux-x86_64/Bumbershoot/bumbershoot-bin-linux-gcc49-release-3_0_10577.tar.bz2 -C debian/tmp/bumbershoot
+	mkdir -p debian/tmp/pwiz
+	tar -xf build-linux-x86_64/pwiz-bin-linux-x86_64-gcc49-release-3_0_10577.tar.bz2 -C debian/tmp/pwiz
 
 override_dh_auto_clean:
-	#rm -rf debian/tmp
-	#bash clean.sh
-
+	rm -rf debian/tmp
+	bash clean.sh

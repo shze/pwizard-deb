@@ -1,0 +1,4 @@
+debian/tmp/bibliospec/BlibBuild usr/bin
+debian/tmp/bibliospec/BlibFilter usr/bin
+debian/tmp/bibliospec/BlibSearch usr/bin
+debian/tmp/bibliospec/BlibToMs2 usr/bin

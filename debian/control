@@ -5,10 +5,24 @@ Priority: optional
 Standards-Version: 3.9.6
 Build-Depends: debhelper (>= 9)
 
-Package: pwizard
+Package: pwizard-bibliospec
 Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Tools and libraries for proteomics data analysis
- The ProteoWizard Library and Tools are a set of modular and extensible 
+Description: BiblioSpec tools for MS/MS peptide spectrum libraries
+ BiblioSpec is a suite of software tools for creating and searching MS/MS 
+ peptide spectrum libraries.
+
+Package: pwizard-bumbershoot
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Bumbershoot tools identify peptides in MS/MS scans
+ The Bumbershoot tools (MyriMatch, DirecTag, TagRecon, and Pepitome) enable 
+ the identification of peptides represented by MS/MS scans.
+
+Package: pwizard-tools
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ProteoWizard tools for proteomics data analysis
+ The ProteoWizard library and tools are a set of modular and extensible 
  open-source, cross-platform tools and software libraries that facilitate 
  proteomics data analysis.
