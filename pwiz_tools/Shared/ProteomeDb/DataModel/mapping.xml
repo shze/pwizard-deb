@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="DbVersionInfo" table="ProteomeDbSchemaVersion">
+    <id name="Id">
+      <column name="Id" not-null="true"/>
+      <generator class="native" />
+    </id>
+    <property name="SchemaVersionMajor"/>
+    <property name="SchemaVersionMinor"/>
+  </class>
+  <class name="DbProtein" table="ProteomeDbProtein">
+    <id name="Id">
+      <column name="Id" not-null="true"/>
+      <generator class="native" />
+    </id>
+    <version name="Version"/>
+    <bag name="Names" cascade="save-update">
+      <key column="Protein"/>
+      <one-to-many class="DbProteinName"/>
+    </bag>
+    <property name="Sequence" length="50000" unique="true"/>
+  </class>
+  <class name="DbProteinName" table="ProteomeDbProteinName">
+    <id name="Id">
+      <column name="Id" not-null="true"/>
+      <generator class="native" />
+    </id>
+    <version name="Version"/>
+    <many-to-one name="Protein" index="Protein"/>
+    <property name="IsPrimary" />
+    <property name="Name" unique="true"/>
+    <property name="Description"/>
+    <property name="PreferredName"/>
+    <property name="Accession"/>
+    <property name="Gene"/>
+    <property name="Species"/>
+    <property name="WebSearchStatus"/>
+  </class>
+  <class name="DbProteinAnnotation" table="ProteomeDbProteinAnnotation">
+    <id name="Id">
+      <column name="Id" not-null="true"/>
+      <generator class="native" />
+    </id>
+    <version name="Version"/>
+    <many-to-one name="Protein" unique-key="ProteinAnnotation" />
+    <property name="Name" unique-key="ProteinAnnotation"/>
+    <property name="Value" />
+  </class>
+  <class name="DbSubsequence" table="ProteomeDbSubsequence">
+    <id name="Sequence">
+      <column name="Sequence"/>
+    </id>
+    <property name="ProteinIdBytes"/>
+  </class>
+</hibernate-mapping>
