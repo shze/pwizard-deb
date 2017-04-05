@@ -1,0 +1,48 @@
+From: Sten Heinze <shze@gmx.de>
+Date: Wed, 5 Apr 2017 12:22:12 -0400
+Subject: Build Bumbershoot except IDPicker.
+
+---
+ pwiz_tools/Bumbershoot/Jamfile.jam | 6 +++---
+ pwiz_tools/Jamfile.jam             | 2 ++
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/pwiz_tools/Bumbershoot/Jamfile.jam b/pwiz_tools/Bumbershoot/Jamfile.jam
+index 59ef5d9..808be4f 100644
+--- a/pwiz_tools/Bumbershoot/Jamfile.jam
++++ b/pwiz_tools/Bumbershoot/Jamfile.jam
+@@ -23,7 +23,7 @@ build-project-if-exists freicore ;
+ build-project-if-exists greazy ;
+ build-project-if-exists myrimatch ;
+ build-project-if-exists pepitome ;
+-build-project-if-exists idpicker ;
++#build-project-if-exists idpicker ;
+ build-project-if-exists quameter ;
+ 
+ .common-location = $(PWIZ_BUILD_PATH)/Bumbershoot ;
+@@ -75,7 +75,7 @@ rule binary-tarball-requirements ( properties * )
+               <dependency>myrimatch//install
+               <dependency>directag//install
+               <dependency>tagrecon//install
+-              <dependency>idpicker//install
++#              <dependency>idpicker//install
+               <dependency>pepitome//install
+               <dependency>quameter//install
+               <location>$(.common-location)
+@@ -186,4 +186,4 @@ tar.create bumbershoot-bin.tar.bz2
+ 
+ tar.create bumbershoot-src.tar.bz2             : $(.common-sources) $(.l) : $(.common-requirements) <name>bumbershoot-src-$(version-tag:J=_).tar.bz2 ;
+ tar.create bumbershoot-src-without-t.tar.bz2   : $(.no-t) $(.common-sources) $(.l) : $(.common-requirements) <name>bumbershoot-src-without-t-$(version-tag:J=_).tar.bz2 ;
+-explicit bumbershoot-src.tar.bz2 bumbershoot-src-without-t.tar.bz2 ;
+\ No newline at end of file
++explicit bumbershoot-src.tar.bz2 bumbershoot-src-without-t.tar.bz2 ;
+diff --git a/pwiz_tools/Jamfile.jam b/pwiz_tools/Jamfile.jam
+index 1fb1fba..8b6c6a2 100644
+--- a/pwiz_tools/Jamfile.jam
++++ b/pwiz_tools/Jamfile.jam
+@@ -30,3 +30,5 @@ build-project-if-exists BiblioSpec ;
+ build-project-if-exists Skyline ;
+ build-project-if-exists Topograph ;
+ build-project-if-exists sld ;
++build-project-if-exists Bumbershoot ;
++
