@@ -19,5 +19,11 @@ override_dh_auto_install:
 	tar -xf build-linux-x86_64/pwiz-bin-linux-x86_64-gcc49-release-3_0_10577.tar.bz2 -C debian/tmp/pwiz
 
 override_dh_auto_clean:
-	rm -rf debian/tmp
+	rm -f debian/files
+	rm -rf debian/tmp/
+	rm -rf debian/pwizard-bibliospec/
+	rm -rf debian/pwizard-bumbershoot/
+	rm -rf debian/pwizard-tools/
+	rm -f debian/pwizard-*.debhelper.log
+	rm -f debian/pwizard-*.substvars
 	bash clean.sh
